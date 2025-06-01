@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosie's Gallery - La magia del arte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Icono del carrito -->
+    <div class="cart-icon" onclick="openCartModal()">
+        🛒
+        <span class="cart-count">0</span>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">Rosie's Gallery</div>
+        <p>la magia del arte y creatividad</p>
+    </header>
+    
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#personalizados">Encargos Personalizados</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Arte Único Hecho a Mano</h1>
+            <p>Cada pieza es una expresión única de creatividad y pasión</p>
+            <a href="#productos" class="btn btn-primary">Ver Colección</a>
+        </div>
+    </section>
+    
+    <!-- Barra de búsqueda -->
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar dibujos...">
+            <button>Buscar</button>
+        </div>
+    </div>
+    
+    <!-- Sección de Productos -->
+    <section class="container" id="productos">
+        <h2 class="section-title">Nuestra Colección</h2>
+        
+        <div class="products">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(https://m.media-amazon.com/images/I/51f4apNu2DL._AC_UF894,1000_QL80_.jpg);"></div>
+                <div class="product-info">
+                    <h3 class="product-title">Stich  en la  playa</h3>
+                    <div class="product-price">$120.00</div>
+                    <p class="product-description">Retrato animado de la pelicula lilo&stich.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart('Retrato al crayola', 120)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8VRjxfa87lffXoPzfpPOosacmJLIqBcMj6Q&s);"></div>
+                <div class="product-info">
+                    <h3 class="product-title">mix de personajes</h3>
+                    <div class="product-price">$95.00</div>
+                    <p class="product-description">personajes variados de disney y pixar.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart('al acrilico', 95)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/one-of-several-versions-of-the-painting-the-scream-by-the-news-photo-1652351980.jpg?resize=980:*');"></div>
+                <div class="product-info">
+                    <h3 class="product-title">obra artistica</h3>
+                    <div class="product-price">$75.00</div>
+                    <p class="product-description">detalles dibujado a lápiz sobre papel Bristol.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart('obra clasica ', 75)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://m.media-amazon.com/images/I/71qu9yi4BFL._AC_UF894,1000_QL80_.jpg');"></div>
+                <div class="product-info">
+                    <h3 class="product-title">la bella y la bestia</h3>
+                    <div class="product-price">$150.00</div>
+                    <p class="product-description">Ilustración de fantasía en tinta y acrílico, perfecta para amantes del género.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart('Ilustración de Fantasía', 150)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjL8w2UQH4D9MnjaD2KQJ67-Vul9Qso3ESxA&s');"></div>
+                <div class="product-info">
+                    <h3 class="product-title">anime</h3>
+                    <div class="product-price">$110.00</div>
+                    <p class="product-description">Retrato de mascota pintado en acrílico sobre lienzo de 20x20cm.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart('anime', 110)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 6 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://img.freepik.com/vector-gratis/fruta-fresca-fresa-saludable_24908-80966.jpg?semt=ais_hybrid&w=740');"></div>
+                <div class="product-info">
+                    <h3 class="product-title">frutal</h3>
+                    <div class="product-price">$180.00</div>
+                    <p class="product-description">Pintura  en óleo sobre lienzo de 30x40cm, lista para colgar.</p>
+                    <div class="product-actions">
+                        <button class="btn" onclick="addToCart(' al Óleo', 180)">Añadir al Carrito</button>
+                        <button class="btn btn-primary">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Encargos Personalizados -->
+    <section class="container" id="personalizados">
+        <h2 class="section-title">Encargos Personalizados</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>¿Quieres un dibujo único y personalizado? En Rosie's Gallery creamos piezas especiales según tus preferencias. Puedes encargar retratos, ilustraciones de mascotas, paisajes de lugares especiales y mucho más.</p>
+            <p>El proceso es simple:</p>
+            <ol style="text-align: left; display: inline-block;">
+                <li>Describe tu idea o envíanos una foto de referencia</li>
+                <li>Recibe una cotización y plazo de entrega</li>
+                <li>Aprueba el boceto inicial</li>
+                <li>Recibe tu obra de arte terminada</li>
+            </ol>
+            <br>
+            <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+        </div>
+    </section>
+    
+    <!-- Sección Sobre Mí -->
+    <section class="container" id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src=https://cdn.shopify.com/s/files/1/0780/2224/6743/files/Material-de-bellas-artes-pintura-1024x683.jpg alt="Rosie" style="width: 100%; border-radius: 10px;">
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3>¡Hola! Soy Rocio</h3>
+                <p>Desde pequeña siempre tuve un lápiz en la mano. Lo que comenzó como un pasatiempo se convirtió en mi pasión y ahora en mi profesión.</p>
+                <p>Me especializo en técnicas tradicionales como carboncillo, lápiz, acuarela y acrílico. Cada obra que creo lleva un pedacito de mi corazón y mi dedicación absoluta a los detalles.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Suscríbete a Nuestro Boletín</h2>
+        <p>Recibe actualizaciones sobre nuevas obras, promociones especiales y consejos de arte.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+    </section>
+    
+    <!-- Sección de Contacto -->
+    <section class="container" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Información de Contacto</h3>
+                <p><strong>Email:</strong> rocio.raque.cisneros@gmail.com</p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/523339416305" style="color: #6d4545; text-decoration: none; font-weight: bold;">+52 33 3941 6305</a></p>
+                <p><strong>Horario:</strong> Lunes a Viernes, 9am - 5pm</p>
+                
+                <h3 style="margin-top: 30px;">Sígueme</h3>
+                <div class="social-icons">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🎨</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Envíanos un Mensaje</h3>
+                <form>
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" placeholder="Tu nombre" style="width: 100%; padding: 10px; border: 1px solid #d4a5a5; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" placeholder="Tu email" style="width: 100%; padding: 10px; border: 1px solid #d4a5a5; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <textarea placeholder="Tu mensaje" rows="5" style="width: 100%; padding: 10px; border: 1px solid #d4a5a5; border-radius: 5px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Envíos y Devoluciones</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </div>
+        <p>&copy; 2023 Rosie's Gallery. Todos los derechos reservados.</p>
+        <p>Dibujos hechos a mano con ❤️</p>
+    </footer>
+    
+    <!-- Modal del Carrito -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCartModal()">&times;</span>
+            <h2>Tu Carrito de Compras</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Los items del carrito se añadirán aquí dinámicamente -->
+                <p>Tu carrito está vacío</p>
+            </div>
+            <div class="cart-total" id="cartTotal">
+                Total: $0.00
+            </div>
+            
+            <!-- Formulario de pago (inicialmente oculto) -->
+            <div class="payment-form" id="paymentForm">
+                <h3>Método de Pago</h3>
+                
+                <div class="payment-methods">
+                    <div class="payment-method selected" onclick="selectPaymentMethod('credit')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa">
+                        <p>Tarjeta de Crédito/Débito</p>
+                    </div>
+                </div>
+                
+                <form id="creditCardForm">
+                    <div class="form-group">
+                        <label for="cardNumber">Número de Tarjeta</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cardName">Nombre en la Tarjeta</label>
+                        <input type="text" id="cardName" placeholder="Nombre como aparece en la tarjeta">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Fecha de Expiración</label>
+                            <input type="text" id="expiryDate" placeholder="MM/AA" maxlength="5" oninput="formatExpiryDate(this)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bank">Banco Emisor</label>
+                        <select id="bank">
+                            <option value="">Selecciona tu banco</option>
+                            <option value="bbva">BBVA</option>
+                            <option value="banamex">Citibanamex</option>
+                            <option value="santander">Santander</option>
+                            <option value="hsbc">HSBC</option>
+                            <option value="banorte">Banorte</option>
+                            <option value="scotiabank">Scotiabank</option>
+                            <option value="banregio">Banregio</option>
+                            <option value="inbursa">Inbursa</option>
+                            <option value="bancoppel">Bancoppel</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" onclick="processPayment()">Pagar Ahora</button>
+                </form>
+            </div>
+            
+            <button class="checkout-btn" id="checkoutBtn" onclick="showPaymentForm()">Proceder al Pago</button>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
